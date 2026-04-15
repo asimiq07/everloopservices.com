@@ -58,7 +58,6 @@
     .hero img {
       width: 420px;
       border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
 
     .btn {
@@ -69,7 +68,6 @@
       border-radius: 8px;
       text-decoration: none;
       display: inline-block;
-      font-weight: 500;
     }
 
     section {
@@ -79,7 +77,27 @@
 
     h2 {
       font-size: 30px;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .steps {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .step {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      width: 250px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
 
     .pricing {
@@ -91,35 +109,21 @@
 
     .card {
       background: white;
-      padding: 35px;
-      border-radius: 16px;
+      padding: 30px;
+      border-radius: 14px;
       width: 260px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
 
     .highlight {
       background: #1f3a5f;
       color: white;
-      transform: scale(1.08);
-    }
-
-    .highlight p {
-      color: #ddd;
+      transform: scale(1.05);
     }
 
     .dark-section {
       background: #1f3a5f;
       color: white;
-      padding: 80px 20px;
-    }
-
-    .dark-section p {
-      color: #ddd;
     }
 
     .form-container {
@@ -142,7 +146,6 @@
       border: none;
       width: 100%;
       border-radius: 8px;
-      font-size: 16px;
     }
 
     footer {
@@ -160,6 +163,7 @@
 <header>
   <div class="logo">∞ EverLoop</div>
   <nav>
+    <a href="#how">How It Works</a>
     <a href="#pricing">Pricing</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -168,12 +172,43 @@
 <div class="hero">
   <div class="hero-text">
     <h1>Never clean your washroom again.</h1>
-    <p>Weekly professional cleaning for homes in Mississauga.</p>
+    <p>EverLoop is a subscription-based cleaning service that keeps your washroom clean every week — automatically.</p>
     <a href="#contact" class="btn">Get Started</a>
   </div>
 
   <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a">
 </div>
+
+<section>
+  <div class="container">
+    <h2>What is EverLoop?</h2>
+    <p>
+      EverLoop is a weekly subscription service designed for busy households.  
+      Instead of booking one-time cleaning again and again, we handle your washroom cleaning every week — consistently and reliably.
+    </p>
+  </div>
+</section>
+
+<section id="how">
+  <h2>How It Works</h2>
+
+  <div class="steps">
+    <div class="step">
+      <h3>1. Sign Up</h3>
+      <p>Choose your plan and submit your details.</p>
+    </div>
+
+    <div class="step">
+      <h3>2. We Schedule</h3>
+      <p>We assign a weekly cleaning slot that works for you.</p>
+    </div>
+
+    <div class="step">
+      <h3>3. We Maintain</h3>
+      <p>Your washroom stays clean every week — no effort needed.</p>
+    </div>
+  </div>
+</section>
 
 <section id="pricing">
   <h2>Simple Subscription Pricing</h2>
@@ -202,11 +237,11 @@
 </section>
 
 <section class="dark-section">
-  <h2>Why EverLoop?</h2>
-  <p>✔ Limited homes per area</p>
-  <p>✔ Reliable & consistent service</p>
-  <p>✔ Local Mississauga team</p>
-  <p>✔ Satisfaction guaranteed</p>
+  <h2>Why Choose EverLoop?</h2>
+  <p>✔ No more last-minute cleaning stress</p>
+  <p>✔ Same cleaner, consistent quality</p>
+  <p>✔ Designed for busy households</p>
+  <p>✔ Limited spots per area</p>
 </section>
 
 <section id="contact">
