@@ -7,7 +7,7 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background: #f5f7fa;
       color: #1f3a5f;
     }
@@ -18,52 +18,77 @@
       padding: 15px 30px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      font-weight: bold;
     }
 
     nav a {
       color: white;
       margin-left: 20px;
       text-decoration: none;
+      font-weight: 500;
     }
 
     .hero {
       text-align: center;
-      padding: 80px 20px;
+      padding: 100px 20px;
       background: white;
     }
 
     .hero h1 {
-      font-size: 38px;
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #555;
     }
 
     .btn {
       background: #1f3a5f;
       color: white;
-      padding: 12px 20px;
+      padding: 14px 25px;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 6px;
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 25px;
+      font-size: 16px;
     }
 
     section {
-      padding: 50px 20px;
+      padding: 70px 20px;
       text-align: center;
     }
 
     .pricing {
       display: flex;
       justify-content: center;
-      gap: 30px;
+      gap: 25px;
       flex-wrap: wrap;
     }
 
     .card {
       background: white;
-      padding: 20px;
-      border-radius: 10px;
-      width: 250px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 25px;
+      border-radius: 12px;
+      width: 260px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .highlight {
+      border: 2px solid #1f3a5f;
     }
 
     .form-container {
@@ -73,19 +98,19 @@
 
     input, textarea {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       margin: 10px 0;
-      border-radius: 5px;
+      border-radius: 6px;
       border: 1px solid #ccc;
     }
 
     button {
       background: #1f3a5f;
       color: white;
-      padding: 12px;
+      padding: 14px;
       border: none;
       width: 100%;
-      border-radius: 5px;
+      border-radius: 6px;
       font-size: 16px;
     }
 
@@ -95,13 +120,20 @@
       text-align: center;
       padding: 20px;
     }
+
+    .badge {
+      color: #1f3a5f;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
   </style>
 </head>
 
 <body>
 
 <header>
-  <h2>EverLoop</h2>
+  <div class="logo">∞ EverLoop</div>
   <nav>
     <a href="#pricing">Pricing</a>
     <a href="#how">How It Works</a>
@@ -111,7 +143,7 @@
 
 <div class="hero">
   <h1>Never clean your washroom again.</h1>
-  <p>Weekly professional cleaning you can rely on.</p>
+  <p>Weekly professional cleaning for homes in Mississauga.</p>
   <a href="#contact" class="btn">Get Started</a>
 </div>
 
@@ -119,9 +151,10 @@
   <h2>Simple Subscription Pricing</h2>
 
   <div class="pricing">
-    <div class="card">
+    <div class="card highlight">
       <h3>$120/month</h3>
       <p>Weekly cleaning for your first washroom</p>
+      <div class="badge">Most Popular</div>
     </div>
 
     <div class="card">
@@ -143,16 +176,16 @@
 
 <section id="how">
   <h2>How It Works</h2>
-  <p>✔ Weekly scheduled service</p>
-  <p>✔ Same cleaner every visit</p>
-  <p>✔ Consistent, reliable results</p>
+  <p>✔ Weekly scheduled visits</p>
+  <p>✔ Same cleaner every time</p>
+  <p>✔ Consistent, high-quality results</p>
 </section>
 
 <section>
-  <h2>Why Choose EverLoop?</h2>
-  <p>✔ Reliable & consistent</p>
-  <p>✔ Local Mississauga team</p>
-  <p>✔ Satisfaction guaranteed</p>
+  <h2>Why EverLoop?</h2>
+  <p>✔ Limited homes accepted (quality focus)</p>
+  <p>✔ Reliable & professional</p>
+  <p>✔ Local Mississauga service</p>
 </section>
 
 <section id="contact">
@@ -166,7 +199,7 @@
       <input type="email" name="email" placeholder="Email" required>
       <textarea name="message" placeholder="Details"></textarea>
 
-      <button type="submit">Submit</button>
+      <button type="submit">Request Service</button>
     </form>
   </div>
 
