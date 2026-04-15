@@ -1,186 +1,304 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EverLoop</title>
+  <title>EverLoop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fafafa;
+      color: #000;
+    }
 
-/* HEADER */
-header {
-  position: sticky;
-  top: 0;
-  background: #111;
-  color: white;
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-}
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(10px);
+      color: white;
+      padding: 18px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.logo {
-  font-size: 28px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
 
-.nav {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-}
+    nav {
+      display: flex;
+      align-items: center;
+    }
 
-.nav a {
-  color: white;
-  text-decoration: none;
-}
+    nav a {
+      color: white;
+      margin-left: 25px;
+      text-decoration: none;
+      font-size: 15px;
+    }
 
-.join-btn {
-  background: white;
-  color: black;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-weight: bold;
-}
+    nav a:hover {
+      opacity: 0.7;
+    }
 
-/* HERO */
-.hero {
-  position: relative;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  padding: 0 60px;
-  color: white;
-}
+    .join-btn {
+      margin-left: 30px;
+      padding: 10px 22px;
+      background: white;
+      color: black;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
 
-.hero img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  filter: brightness(60%);
-}
+    .join-btn:hover {
+      background: #e5e5e5;
+    }
 
-.hero-content {
-  max-width: 500px;
-}
+    /* HERO */
+    .hero {
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      padding: 0 40px;
 
-.hero h1 {
-  font-size: 60px;
-  margin-bottom: 20px;
-}
+      background: 
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a');
 
-.hero p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
+      background-size: cover;
+      background-position: center;
 
-.cta {
-  background: black;
-  color: white;
-  padding: 14px 30px;
-  border-radius: 30px;
-  display: inline-block;
-}
+      color: white;
+    }
 
-/* SECTION */
-.section {
-  padding: 60px 40px;
-}
+    .hero-text {
+      max-width: 600px;
+      padding-top: 40px;
+    }
 
-.section h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
+    .hero h1 {
+      font-size: 56px;
+      margin-bottom: 15px;
+    }
 
-.section p {
-  max-width: 600px;
-  line-height: 1.6;
-}
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+      color: #eaeaea;
+    }
 
-/* FORM */
-.form-container {
-  max-width: 500px;
-}
+    .btn {
+      padding: 14px 30px;
+      background: #000;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+    }
 
-input, textarea {
-  width: 100%;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 10px;
-  border: 2px solid black;
-}
+    .btn:hover {
+      background: #222;
+      transform: translateY(-2px);
+    }
 
-button {
-  width: 100%;
-  padding: 15px;
-  background: black;
-  color: white;
-  border: none;
-  border-radius: 30px;
-}
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
 
-/* FOOTER */
-footer {
-  background: black;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-</style>
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .container p {
+      font-size: 22px;
+      line-height: 1.8;
+      color: #444;
+      max-width: 720px;
+      margin: auto;
+      font-weight: 400;
+    }
+
+    /* STEPS */
+    .steps {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .step {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      width: 260px;
+      border: 1px solid black;
+    }
+
+    /* PRICING */
+    .pricing {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      border: 1px solid black;
+      width: 260px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .highlight {
+      background: black;
+      color: white;
+    }
+
+    /* FORM */
+    .form-container {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px solid black;
+    }
+
+    button {
+      background: black;
+      color: white;
+      padding: 14px;
+      border: none;
+      width: 100%;
+      border-radius: 30px;
+    }
+
+    footer {
+      background: black;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+  </style>
 </head>
 
 <body>
 
 <header>
   <div class="logo">∞ EVERLOOP</div>
-  <div class="nav">
-    <a href="#">How It Works</a>
-    <a href="#">Pricing</a>
-    <a href="#">Contact</a>
-    <a href="#" class="join-btn">Join Now</a>
-  </div>
+
+  <nav>
+    <a href="#how">How It Works</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="join-btn">Join Now</a>
+  </nav>
 </header>
 
-<section class="hero">
-  <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a">
-
-  <div class="hero-content">
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-text">
     <h1>Never clean your washroom again.</h1>
     <p>EverLoop keeps your washroom clean every week.</p>
-    <a href="#form" class="cta">Get Started</a>
+    <a href="#contact" class="btn">Get Started</a>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <h2>What is EverLoop?</h2>
+    <p>
+      EverLoop is a subscription-based washroom cleaning service built for busy households.  
+      Instead of booking again and again, your cleaning is scheduled every week — 
+      so your washroom stays consistently fresh without the hassle.
+      <br><br>
+      With the same trusted cleaner, consistent quality, and a simple monthly plan, 
+      EverLoop turns cleaning into something you never have to think about.
+    </p>
   </div>
 </section>
 
-<section class="section">
-  <h2>What is EverLoop?</h2>
-  <p>
-    EverLoop is a subscription-based washroom cleaning service built for busy households.
-    Instead of booking again and again, your cleaning is scheduled every week — so your washroom stays consistently fresh without the hassle.
-    With the same trusted cleaner, consistent quality, and a simple monthly plan, EverLoop turns cleaning into something you never have to think about.
-  </p>
+<section id="how">
+  <h2>How It Works</h2>
+
+  <div class="steps">
+    <div class="step">
+      <h3>1. Sign Up</h3>
+      <p>Submit your details and choose your plan.</p>
+    </div>
+
+    <div class="step">
+      <h3>2. We Schedule</h3>
+      <p>We assign your weekly cleaning slot.</p>
+    </div>
+
+    <div class="step">
+      <h3>3. We Maintain</h3>
+      <p>Your washroom stays clean every week.</p>
+    </div>
+  </div>
 </section>
 
-<section class="section" id="form">
+<section id="pricing">
+  <h2>Simple Subscription Pricing</h2>
+
+  <div class="pricing">
+    <div class="card highlight">
+      <h3>$120/month</h3>
+      <p>Weekly cleaning for your first washroom</p>
+    </div>
+
+    <div class="card">
+      <h3>+$30/month</h3>
+      <p>Each additional washroom</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
   <h2>Get Started</h2>
 
   <div class="form-container">
-    <input type="text" placeholder="Name">
-    <input type="email" placeholder="Email">
-    <input type="text" placeholder="Phone">
-    <textarea placeholder="Address"></textarea>
-    <button>Request Service</button>
+    <form action="https://formspree.io/f/mdaykqog" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="text" name="address" placeholder="Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Details"></textarea>
+
+      <button type="submit">Request Service</button>
+    </form>
   </div>
+
 </section>
 
 <footer>
