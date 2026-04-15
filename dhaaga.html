@@ -9,7 +9,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f8f8f8;
+  background: #f5efe9; /* pastel luxury beige */
 }
 
 /* NAVBAR */
@@ -94,6 +94,10 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background: #16324d;
+}
+
 /* ABOUT BOX */
 .about-section {
   display: flex;
@@ -135,7 +139,8 @@ button {
   <div class="nav-links">
     <a href="#">Home</a>
     <a href="#">About Us</a>
-    <a href="#">Contact Us</a>
+    <a href="#">Contact</a>
+    <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank">Instagram</a>
   </div>
 </div>
 
@@ -157,7 +162,7 @@ button {
     <img id="pinkImg" src="images/Pink1.webp">
     <h3>Pink Floral Kurti</h3>
     <div class="price">$45</div>
-    <button>Order Now</button>
+    <button onclick="orderNow('Pink Floral Kurti')">Order Now</button>
   </div>
 
   <!-- ORANGE -->
@@ -167,7 +172,7 @@ button {
     <img id="orangeImg" src="images/Orange1.webp">
     <h3>Orange Chikankari Kurti</h3>
     <div class="price">$50</div>
-    <button>Order Now</button>
+    <button onclick="orderNow('Orange Chikankari Kurti')">Order Now</button>
   </div>
 
   <!-- GREEN -->
@@ -177,7 +182,7 @@ button {
     <img id="greenImg" src="images/Green1.webp">
     <h3>Green Elegant Kurti</h3>
     <div class="price">$48</div>
-    <button>Order Now</button>
+    <button onclick="orderNow('Green Elegant Kurti')">Order Now</button>
   </div>
 
 </div>
@@ -215,6 +220,13 @@ function startHover(id, images) {
 
 function stopHover() {
   clearInterval(hoverInterval);
+}
+
+function orderNow(product) {
+  const phone = "166479138517";
+  const message = `Hi, I'm interested in ${product}`;
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
 }
 </script>
 
