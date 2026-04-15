@@ -12,7 +12,6 @@
       color: #000;
     }
 
-    /* HEADER */
     header {
       position: sticky;
       top: 0;
@@ -44,10 +43,6 @@
       font-size: 15px;
     }
 
-    nav a:hover {
-      opacity: 0.7;
-    }
-
     .join-btn {
       margin-left: 30px;
       padding: 10px 22px;
@@ -56,44 +51,30 @@
       border-radius: 25px;
       font-weight: 600;
       text-decoration: none;
-      transition: 0.3s;
     }
 
-    .join-btn:hover {
-      background: #e5e5e5;
-    }
-
-    /* HERO */
     .hero {
       height: 90vh;
       display: flex;
       align-items: center;
       padding: 0 40px;
-
-      background: 
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-        url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a');
-
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+      url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a');
       background-size: cover;
       background-position: center;
-
       color: white;
     }
 
     .hero-text {
       max-width: 600px;
-      padding-top: 40px;
     }
 
     .hero h1 {
       font-size: 56px;
-      margin-bottom: 15px;
     }
 
     .hero p {
       font-size: 18px;
-      margin-bottom: 25px;
-      color: #eaeaea;
     }
 
     .btn {
@@ -102,13 +83,6 @@
       color: white;
       border-radius: 30px;
       text-decoration: none;
-      display: inline-block;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #222;
-      transform: translateY(-2px);
     }
 
     section {
@@ -118,7 +92,6 @@
 
     h2 {
       font-size: 32px;
-      margin-bottom: 20px;
     }
 
     .container {
@@ -130,17 +103,13 @@
       font-size: 17px;
       line-height: 1.7;
       color: #444;
-      max-width: 700px;
-      margin: auto;
     }
 
-    /* STEPS */
     .steps {
       display: flex;
       justify-content: center;
       gap: 30px;
       flex-wrap: wrap;
-      margin-top: 40px;
     }
 
     .step {
@@ -151,7 +120,6 @@
       border: 1px solid black;
     }
 
-    /* PRICING */
     .pricing {
       display: flex;
       justify-content: center;
@@ -165,11 +133,6 @@
       border-radius: 16px;
       border: 1px solid black;
       width: 260px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
     }
 
     .highlight {
@@ -177,7 +140,6 @@
       color: white;
     }
 
-    /* FORM */
     .form-container {
       max-width: 500px;
       margin: auto;
@@ -214,7 +176,6 @@
 
 <header>
   <div class="logo">∞ EVERLOOP</div>
-
   <nav>
     <a href="#how">How It Works</a>
     <a href="#pricing">Pricing</a>
@@ -223,7 +184,6 @@
   </nav>
 </header>
 
-<!-- HERO -->
 <div class="hero">
   <div class="hero-text">
     <h1>Never clean your washroom again.</h1>
@@ -248,18 +208,15 @@
 
 <section id="how">
   <h2>How It Works</h2>
-
   <div class="steps">
     <div class="step">
       <h3>1. Sign Up</h3>
       <p>Submit your details and choose your plan.</p>
     </div>
-
     <div class="step">
       <h3>2. We Schedule</h3>
       <p>We assign your weekly cleaning slot.</p>
     </div>
-
     <div class="step">
       <h3>3. We Maintain</h3>
       <p>Your washroom stays clean every week.</p>
@@ -269,13 +226,11 @@
 
 <section id="pricing">
   <h2>Simple Subscription Pricing</h2>
-
   <div class="pricing">
     <div class="card highlight">
       <h3>$120/month</h3>
       <p>Weekly cleaning for your first washroom</p>
     </div>
-
     <div class="card">
       <h3>+$30/month</h3>
       <p>Each additional washroom</p>
@@ -283,21 +238,9 @@
   </div>
 </section>
 
-<!-- ✅ UPDATED CONTACT SECTION -->
+<!-- FORM FIRST -->
 <section id="contact">
   <h2>Get Started</h2>
-
-  <div style="margin-bottom:30px; font-size:16px; color:#333;">
-    <p><strong>Phone:</strong> 
-      <a href="tel:4377178874" style="color:black;">437-717-8874</a>
-    </p>
-
-    <p><strong>Instagram:</strong> 
-      <a href="https://instagram.com/everloopservices" target="_blank" style="color:black;">
-        @everloopservices
-      </a>
-    </p>
-  </div>
 
   <div class="form-container">
     <form action="https://formspree.io/f/mdaykqog" method="POST">
@@ -311,6 +254,20 @@
     </form>
   </div>
 
+</section>
+
+<!-- 🔥 CONTACT US AFTER -->
+<section>
+  <h2>Contact Us</h2>
+  <div class="container">
+    <p>
+      For further inquiries, please contact our team.
+      <br><br>
+      📞 437-717-8874 <br>
+      📸 @everloopservices <br>
+      ✉️ everloopservices@gmail.com
+    </p>
+  </div>
 </section>
 
 <footer>
