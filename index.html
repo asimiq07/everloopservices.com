@@ -8,99 +8,53 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #f4f6f9;
+      background: #f8f9fb;
       color: #1f3a5f;
     }
 
     header {
-      background: #1f3a5f;
-      color: white;
-      padding: 18px 40px;
+      background: white;
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      border-bottom: 1px solid #eee;
     }
 
     .logo {
-      font-size: 22px;
       font-weight: bold;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 25px;
-      text-decoration: none;
+      font-size: 22px;
     }
 
     .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 110px 40px;
-      background: linear-gradient(to right, #ffffff, #eef3f9);
-      flex-wrap: wrap;
-    }
-
-    .hero-text {
-      max-width: 520px;
+      padding: 120px 20px;
+      text-align: center;
     }
 
     .hero h1 {
       font-size: 56px;
       margin-bottom: 15px;
-      line-height: 1.1;
     }
 
     .hero p {
-      font-size: 18px;
+      font-size: 20px;
       color: #555;
     }
 
-    .hero img {
-      width: 420px;
-      border-radius: 12px;
-    }
-
     .btn {
-      margin-top: 25px;
-      padding: 14px 30px;
+      margin-top: 30px;
+      padding: 15px 35px;
       background: #1f3a5f;
       color: white;
       border-radius: 8px;
       text-decoration: none;
       display: inline-block;
-      font-weight: 500;
+      font-size: 16px;
     }
 
     section {
-      padding: 90px 20px;
+      padding: 80px 20px;
       text-align: center;
-    }
-
-    h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-
-    .container {
-      max-width: 850px;
-      margin: auto;
-    }
-
-    .steps {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      margin-top: 40px;
-    }
-
-    .step {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      width: 260px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
 
     .pricing {
@@ -108,7 +62,6 @@
       justify-content: center;
       gap: 40px;
       flex-wrap: wrap;
-      margin-top: 40px;
     }
 
     .card {
@@ -126,49 +79,18 @@
       transform: scale(1.05);
     }
 
-    .dark-section {
-      background: #1f3a5f;
-      color: white;
-    }
-
-    .cta {
-      background: #e8eef6;
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    .cta h2 {
-      margin-bottom: 15px;
-    }
-
-    .form-container {
-      max-width: 500px;
+    .why {
+      max-width: 600px;
       margin: auto;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 14px;
-      margin: 10px 0;
-      border-radius: 8px;
-      border: none;
-    }
-
-    button {
-      background: #1f3a5f;
-      color: white;
-      padding: 14px;
-      border: none;
-      width: 100%;
-      border-radius: 8px;
-      font-size: 16px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #555;
     }
 
     footer {
-      background: #1f3a5f;
-      color: white;
-      padding: 25px;
+      padding: 30px;
       text-align: center;
+      color: #777;
     }
 
   </style>
@@ -178,56 +100,16 @@
 
 <header>
   <div class="logo">∞ EverLoop</div>
-  <nav>
-    <a href="#how">How It Works</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#contact">Contact</a>
-  </nav>
 </header>
 
 <div class="hero">
-  <div class="hero-text">
-    <h1>Never clean your washroom again.</h1>
-    <p>EverLoop keeps your washroom clean every week — automatically.</p>
-    <a href="#contact" class="btn">Get Started</a>
-  </div>
-
-  <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a">
+  <h1>Never clean your washroom again.</h1>
+  <p>We clean it every week — so you don’t have to.</p>
+  <a href="#contact" class="btn">Get Started</a>
 </div>
 
 <section>
-  <div class="container">
-    <h2>What is EverLoop?</h2>
-    <p>
-      A subscription-based cleaning service designed for busy households.  
-      No more booking again and again — we handle your washroom cleaning every week.
-    </p>
-  </div>
-</section>
-
-<section id="how">
-  <h2>How It Works</h2>
-
-  <div class="steps">
-    <div class="step">
-      <h3>1. Sign Up</h3>
-      <p>Submit your details and choose your plan.</p>
-    </div>
-
-    <div class="step">
-      <h3>2. We Schedule</h3>
-      <p>We assign your weekly cleaning slot.</p>
-    </div>
-
-    <div class="step">
-      <h3>3. We Maintain</h3>
-      <p>Your washroom stays clean every week.</p>
-    </div>
-  </div>
-</section>
-
-<section id="pricing">
-  <h2>Simple Subscription Pricing</h2>
+  <h2>Simple Pricing</h2>
 
   <div class="pricing">
     <div class="card highlight">
@@ -242,39 +124,32 @@
   </div>
 </section>
 
-<section class="dark-section">
-  <h2>Why Choose EverLoop?</h2>
-  <p>✔ No more last-minute cleaning stress</p>
-  <p>✔ Same cleaner every visit</p>
-  <p>✔ Consistent premium quality</p>
-  <p>✔ Limited homes per area</p>
-</section>
-
-<section class="cta">
-  <h2>Limited spots available in Mississauga</h2>
-  <p>Secure your weekly cleaning slot today.</p>
-  <a href="#contact" class="btn">Request Service</a>
+<section>
+  <h2>Why EverLoop?</h2>
+  <div class="why">
+    No more scheduling. No more last-minute cleaning stress.  
+    EverLoop is designed for busy households who want a consistently clean washroom — without thinking about it.
+  </div>
 </section>
 
 <section id="contact">
   <h2>Get Started</h2>
 
-  <div class="form-container">
-    <form action="https://formspree.io/f/mdaykqog" method="POST">
-      <input type="text" name="name" placeholder="Full Name" required>
-      <input type="text" name="address" placeholder="Address" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" placeholder="Details"></textarea>
+  <form action="https://formspree.io/f/mdaykqog" method="POST" style="max-width:500px;margin:auto;">
+    <input type="text" name="name" placeholder="Full Name" required style="width:100%;padding:14px;margin:10px 0;border-radius:8px;border:1px solid #ccc;">
+    <input type="text" name="address" placeholder="Address" required style="width:100%;padding:14px;margin:10px 0;border-radius:8px;border:1px solid #ccc;">
+    <input type="tel" name="phone" placeholder="Phone Number" required style="width:100%;padding:14px;margin:10px 0;border-radius:8px;border:1px solid #ccc;">
+    <input type="email" name="email" placeholder="Email" required style="width:100%;padding:14px;margin:10px 0;border-radius:8px;border:1px solid #ccc;">
+    <textarea name="message" placeholder="Details" style="width:100%;padding:14px;margin:10px 0;border-radius:8px;border:1px solid #ccc;"></textarea>
 
-      <button type="submit">Request Service</button>
-    </form>
-  </div>
-
+    <button type="submit" style="width:100%;padding:14px;background:#1f3a5f;color:white;border:none;border-radius:8px;">
+      Request Service
+    </button>
+  </form>
 </section>
 
 <footer>
-  <p>EverLoop © 2026</p>
+  EverLoop © 2026
 </footer>
 
 </body>
