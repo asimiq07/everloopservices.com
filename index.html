@@ -33,14 +33,21 @@
     }
 
     .hero {
-      padding: 120px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #ffffff, #e8eef6);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 40px;
+      background: white;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      max-width: 500px;
     }
 
     .hero h1 {
       font-size: 48px;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     .hero p {
@@ -48,15 +55,19 @@
       color: #555;
     }
 
+    .hero img {
+      width: 400px;
+      border-radius: 10px;
+    }
+
     .btn {
-      margin-top: 25px;
+      margin-top: 20px;
       padding: 14px 30px;
       background: #1f3a5f;
       color: white;
       border-radius: 8px;
       text-decoration: none;
       display: inline-block;
-      font-weight: 500;
     }
 
     section {
@@ -66,7 +77,6 @@
 
     h2 {
       margin-bottom: 40px;
-      font-size: 28px;
     }
 
     .pricing {
@@ -79,7 +89,7 @@
     .card {
       background: white;
       padding: 30px;
-      border-radius: 14px;
+      border-radius: 12px;
       width: 260px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
       transition: 0.3s;
@@ -92,12 +102,6 @@
     .highlight {
       border: 2px solid #1f3a5f;
       transform: scale(1.05);
-    }
-
-    .badge {
-      margin-top: 10px;
-      font-weight: bold;
-      color: #1f3a5f;
     }
 
     .form-container {
@@ -120,7 +124,6 @@
       border: none;
       width: 100%;
       border-radius: 8px;
-      font-size: 16px;
     }
 
     footer {
@@ -139,15 +142,18 @@
   <div class="logo">∞ EverLoop</div>
   <nav>
     <a href="#pricing">Pricing</a>
-    <a href="#how">How It Works</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <div class="hero">
-  <h1>Never clean your washroom again.</h1>
-  <p>Weekly professional cleaning for homes in Mississauga.</p>
-  <a href="#contact" class="btn">Get Started</a>
+  <div class="hero-text">
+    <h1>Never clean your washroom again.</h1>
+    <p>Weekly professional cleaning for homes in Mississauga.</p>
+    <a href="#contact" class="btn">Get Started</a>
+  </div>
+
+  <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a" alt="clean bathroom">
 </div>
 
 <section id="pricing">
@@ -157,7 +163,6 @@
     <div class="card highlight">
       <h3>$120/month</h3>
       <p>Weekly cleaning for your first washroom</p>
-      <div class="badge">Most Popular</div>
     </div>
 
     <div class="card">
@@ -175,16 +180,6 @@
       <p>$180/month</p>
     </div>
   </div>
-</section>
-
-<section id="how">
-  <h2>How It Works</h2>
-  <p>Weekly service. Same cleaner. Consistent results.</p>
-</section>
-
-<section>
-  <h2>Why EverLoop?</h2>
-  <p>Limited homes accepted. Premium quality. Local service.</p>
 </section>
 
 <section id="contact">
