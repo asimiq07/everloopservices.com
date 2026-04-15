@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dhaaga Collections</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fafafa;
+      color: #1f3a5f;
+    }
+
+    header {
+      padding: 20px 40px;
+      background: white;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .product img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 15px;
+    }
+
+    .sizes {
+      font-size: 14px;
+      color: #555;
+      margin: 10px 0;
+    }
+
+    .btn {
+      display: block;
+      text-align: center;
+      padding: 10px;
+      background: #1f3a5f;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Dhaaga Collections</div>
+</header>
+
+<div class="hero">
+  <h1>Elegant Everyday Wear</h1>
+  <p>Premium ethnic styles curated for you</p>
+</div>
+
+<div class="products">
+
+  <div class="product">
+    <img src="https://images.unsplash.com/photo-1602810319428-019690571b5b">
+    <div class="product-info">
+      <h3>Chikankari Kurti</h3>
+      <p>$35</p>
+      <div class="sizes">Sizes: S, M, L</div>
+      <a href="https://wa.me/" class="btn">Order Now</a>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c">
+    <div class="product-info">
+      <h3>Kurti Set</h3>
+      <p>$55</p>
+      <div class="sizes">Sizes: S, M, L</div>
+      <a href="https://wa.me/" class="btn">Order Now</a>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="https://images.unsplash.com/photo-1622470953794-aa9c70b0fb9d">
+    <div class="product-info">
+      <h3>Casual Kurta</h3>
+      <p>$40</p>
+      <div class="sizes">Sizes: S, M, L</div>
+      <a href="https://wa.me/" class="btn">Order Now</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
