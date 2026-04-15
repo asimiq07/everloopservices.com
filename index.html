@@ -1,36 +1,180 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>EverLoop Services</title>
+  <title>EverLoop</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
-    body { font-family: Arial; margin: 0; background: #f5f7fa; }
-    header { background: #0a74da; color: white; padding: 20px; text-align: center; }
-    section { padding: 20px; }
-    .btn { background: #0a74da; color: white; padding: 10px 20px; text-decoration: none; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #1f3a5f;
+    }
+
+    header {
+      background: #1f3a5f;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: white;
+    }
+
+    .hero h1 {
+      font-size: 38px;
+    }
+
+    .btn {
+      background: #1f3a5f;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .pricing {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #1f3a5f;
+      color: white;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    footer {
+      background: #1f3a5f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
   </style>
 </head>
+
 <body>
 
 <header>
-  <h1>EverLoop Services</h1>
-  <p>Professional Toilet & Bathroom Cleaning</p>
+  <h2>EverLoop</h2>
+  <nav>
+    <a href="#pricing">Pricing</a>
+    <a href="#how">How It Works</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<section>
-  <h2>Our Services</h2>
-  <ul>
-    <li>Toilet Deep Cleaning</li>
-    <li>Bathroom Sanitization</li>
-    <li>Odor Removal</li>
-  </ul>
+<div class="hero">
+  <h1>Never clean your washroom again.</h1>
+  <p>Weekly professional cleaning you can rely on.</p>
+  <a href="#contact" class="btn">Get Started</a>
+</div>
+
+<section id="pricing">
+  <h2>Simple Subscription Pricing</h2>
+
+  <div class="pricing">
+    <div class="card">
+      <h3>$120/month</h3>
+      <p>Weekly cleaning for your first washroom</p>
+    </div>
+
+    <div class="card">
+      <h3>+$30/month</h3>
+      <p>Each additional washroom</p>
+    </div>
+
+    <div class="card">
+      <h3>2 Washrooms</h3>
+      <p>$150/month</p>
+    </div>
+
+    <div class="card">
+      <h3>3 Washrooms</h3>
+      <p>$180/month</p>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <h2>How It Works</h2>
+  <p>✔ Weekly scheduled service</p>
+  <p>✔ Same cleaner every visit</p>
+  <p>✔ Consistent, reliable results</p>
 </section>
 
 <section>
-  <h2>Contact Us</h2>
-  <p>Email: your@email.com</p>
-  <p>Phone: 123-456-7890</p>
+  <h2>Why Choose EverLoop?</h2>
+  <p>✔ Reliable & consistent</p>
+  <p>✔ Local Mississauga team</p>
+  <p>✔ Satisfaction guaranteed</p>
 </section>
+
+<section id="contact">
+  <h2>Get Started</h2>
+
+  <div class="form-container">
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="text" name="address" placeholder="Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Details"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+</section>
+
+<footer>
+  <p>EverLoop © 2026</p>
+</footer>
 
 </body>
 </html>
