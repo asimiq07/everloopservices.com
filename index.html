@@ -1,231 +1,283 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EverLoop</title>
+  <title>EverLoop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f7fa;
-    color: #1f2d3d;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f9;
+      color: #1f3a5f;
+    }
 
-/* NAVBAR */
-nav {
-    background: #243b5a;
-    color: white;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    header {
+      background: #1f3a5f;
+      color: white;
+      padding: 18px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 25px;
-    font-size: 14px;
-}
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
 
-/* HERO */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 80px 60px;
-}
+    nav a {
+      color: white;
+      margin-left: 25px;
+      text-decoration: none;
+    }
 
-.hero-text {
-    max-width: 50%;
-}
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 110px 40px;
+      background: linear-gradient(to right, #ffffff, #eef3f9);
+      flex-wrap: wrap;
+    }
 
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
+    .hero-text {
+      max-width: 520px;
+    }
 
-.hero p {
-    font-size: 18px;
-    color: #555;
-}
+    .hero h1 {
+      font-size: 56px;
+      margin-bottom: 15px;
+      line-height: 1.1;
+    }
 
-.hero button {
-    margin-top: 20px;
-    padding: 12px 24px;
-    border: none;
-    background: #243b5a;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-}
+    .hero p {
+      font-size: 18px;
+      color: #555;
+    }
 
-/* IMAGE SIZE (your preferred bigger one) */
-.hero img {
-    width: 500px;
-    border-radius: 12px;
-}
+    /* 🔥 UPDATED IMAGE SIZE */
+    .hero img {
+      width: 600px;
+      max-width: 100%;
+      border-radius: 12px;
+    }
 
-/* SECTIONS */
-.section {
-    text-align: center;
-    padding: 80px 20px;
-}
+    .btn {
+      margin-top: 25px;
+      padding: 14px 30px;
+      background: #1f3a5f;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: 500;
+    }
 
-.section h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-}
+    section {
+      padding: 90px 20px;
+      text-align: center;
+    }
 
-.section p {
-    max-width: 700px;
-    margin: auto;
-    color: #555;
-}
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
 
-/* PRICING */
-.pricing {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-}
+    .container {
+      max-width: 850px;
+      margin: auto;
+    }
 
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    width: 220px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
+    .steps {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
 
-.card h3 {
-    margin-bottom: 10px;
-}
+    .step {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      width: 260px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
 
-/* HOW IT WORKS */
-.steps {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 40px;
-}
+    .pricing {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
 
-.step {
-    max-width: 200px;
-}
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      width: 280px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+      font-size: 20px;
+    }
 
-/* CONTACT */
-form {
-    max-width: 400px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+    .highlight {
+      background: #1f3a5f;
+      color: white;
+      transform: scale(1.05);
+    }
 
-input, textarea {
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
+    .dark-section {
+      background: #1f3a5f;
+      color: white;
+    }
 
-button.submit {
-    background: #243b5a;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-</style>
+    .cta {
+      background: #e8eef6;
+      padding: 80px 20px;
+      text-align: center;
+    }
 
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+    }
+
+    button {
+      background: #1f3a5f;
+      color: white;
+      padding: 14px;
+      border: none;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    footer {
+      background: #1f3a5f;
+      color: white;
+      padding: 25px;
+      text-align: center;
+    }
+
+  </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav>
-    <div><b>∞ EverLoop</b></div>
-    <div>
-        <a href="#pricing">Pricing</a>
-        <a href="#how">How It Works</a>
-        <a href="#contact">Contact</a>
-    </div>
-</nav>
+<header>
+  <div class="logo">∞ EverLoop</div>
+  <nav>
+    <a href="#how">How It Works</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-<!-- HERO -->
 <div class="hero">
-    <div class="hero-text">
-        <h1>Never clean your washroom again.</h1>
-        <p>EverLoop is a subscription-based cleaning service that keeps your washroom clean every week.</p>
-        <button onclick="location.href='#contact'">Get Started</button>
-    </div>
-    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a" alt="bathroom">
+  <div class="hero-text">
+    <h1>Never clean your washroom again.</h1>
+    <p>EverLoop keeps your washroom clean every week — automatically.</p>
+    <a href="#contact" class="btn">Get Started</a>
+  </div>
+
+  <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a">
 </div>
 
-<!-- WHAT IS EVERLOOP (CENTERED FIXED) -->
-<div class="section">
+<section>
+  <div class="container">
     <h2>What is EverLoop?</h2>
     <p>
-        EverLoop is a weekly subscription cleaning service designed for busy households. 
-        Instead of booking cleaning again and again, we handle your washroom cleaning every week — 
-        consistently and reliably.
+      A subscription-based cleaning service designed for busy households.  
+      No more booking again and again — we handle your washroom cleaning every week.
     </p>
-</div>
+  </div>
+</section>
 
-<!-- PRICING -->
-<div class="section" id="pricing">
-    <h2>Simple Subscription Pricing</h2>
-    <div class="pricing">
-        <div class="card">
-            <h3>$120/month</h3>
-            <p>Weekly cleaning for your first washroom</p>
-        </div>
+<section id="how">
+  <h2>How It Works</h2>
 
-        <div class="card">
-            <h3>+$30/month</h3>
-            <p>Each additional washroom</p>
-        </div>
+  <div class="steps">
+    <div class="step">
+      <h3>1. Sign Up</h3>
+      <p>Submit your details and choose your plan.</p>
     </div>
-</div>
 
-<!-- HOW IT WORKS -->
-<div class="section" id="how">
-    <h2>How It Works</h2>
-    <div class="steps">
-        <div class="step">
-            <h4>1. Sign Up</h4>
-            <p>Choose your plan and schedule</p>
-        </div>
-
-        <div class="step">
-            <h4>2. We Clean</h4>
-            <p>Same cleaner. Same day. Every week</p>
-        </div>
-
-        <div class="step">
-            <h4>3. Relax</h4>
-            <p>No more scrubbing ever again</p>
-        </div>
+    <div class="step">
+      <h3>2. We Schedule</h3>
+      <p>We assign your weekly cleaning slot.</p>
     </div>
-</div>
 
-<!-- CONTACT -->
-<div class="section" id="contact">
-    <h2>Contact Us</h2>
+    <div class="step">
+      <h3>3. We Maintain</h3>
+      <p>Your washroom stays clean every week.</p>
+    </div>
+  </div>
+</section>
 
+<section id="pricing">
+  <h2>Simple Subscription Pricing</h2>
+
+  <div class="pricing">
+    <div class="card highlight">
+      <h3>$120/month</h3>
+      <p>Weekly cleaning for your first washroom</p>
+    </div>
+
+    <div class="card">
+      <h3>+$30/month</h3>
+      <p>Each additional washroom</p>
+    </div>
+  </div>
+</section>
+
+<section class="dark-section">
+  <h2>Why Choose EverLoop?</h2>
+  <p>✔ No more last-minute cleaning stress</p>
+  <p>✔ Same cleaner every visit</p>
+  <p>✔ Consistent premium quality</p>
+  <p>✔ Limited homes per area</p>
+</section>
+
+<section class="cta">
+  <h2>Limited spots available in Mississauga</h2>
+  <p>Secure your weekly cleaning slot today.</p>
+  <a href="#contact" class="btn">Request Service</a>
+</section>
+
+<section id="contact">
+  <h2>Get Started</h2>
+
+  <div class="form-container">
     <form action="https://formspree.io/f/mdaykqog" method="POST">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="text" name="address" placeholder="Address" required>
-        <input type="tel" name="phone" placeholder="Phone Number" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <textarea name="message" placeholder="Message"></textarea>
-        <button class="submit" type="submit">Submit</button>
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="text" name="address" placeholder="Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Details"></textarea>
+
+      <button type="submit">Request Service</button>
     </form>
-</div>
+  </div>
+
+</section>
+
+<footer>
+  <p>EverLoop © 2026</p>
+</footer>
 
 </body>
 </html>
