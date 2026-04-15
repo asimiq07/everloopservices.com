@@ -13,35 +13,90 @@
     }
 
     header {
-      padding: 25px 60px;
+      padding: 20px 60px;
       background: white;
-      display: flex;
-      justify-content: space-between;
       border-bottom: 1px solid #eee;
     }
 
     .logo {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 600;
       letter-spacing: 1px;
     }
 
-    .hero {
+    /* HERO IMAGE */
+    .hero-image {
+      width: 100%;
+      height: 500px;
+      background: url('YOUR_MUKAISH_IMAGE_HERE') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding: 60px;
+      color: white;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h1 {
+      font-size: 42px;
+      margin: 0;
+    }
+
+    .hero-text p {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    /* BRAND INTRO */
+    .intro {
       text-align: center;
-      padding: 100px 20px 60px;
+      padding: 80px 20px;
     }
 
-    .hero h1 {
-      font-size: 48px;
+    .intro h2 {
+      font-size: 36px;
       margin-bottom: 10px;
-      font-weight: 500;
     }
 
-    .hero p {
+    .intro p {
       color: #666;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    /* PROCESS */
+    .process {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 60px;
+      background: #fff;
+    }
+
+    .step {
+      text-align: center;
+    }
+
+    .step img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .step h3 {
+      margin-top: 15px;
       font-size: 18px;
     }
 
+    .step p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* PRODUCTS */
     .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -63,7 +118,7 @@
 
     .product img {
       width: 100%;
-      height: 360px;
+      height: 380px;
       object-fit: cover;
     }
 
@@ -74,19 +129,11 @@
     .product h3 {
       margin: 0;
       font-size: 18px;
-      font-weight: 500;
     }
 
     .price {
       margin: 8px 0;
-      font-size: 16px;
       color: #444;
-    }
-
-    .sizes {
-      font-size: 13px;
-      color: #777;
-      margin-bottom: 12px;
     }
 
     .btn {
@@ -104,7 +151,6 @@
       text-align: center;
       padding: 40px;
       color: #888;
-      font-size: 14px;
     }
   </style>
 </head>
@@ -115,39 +161,63 @@
   <div class="logo">Dhaaga Collections</div>
 </header>
 
-<div class="hero">
-  <h1>Dhaaga</h1>
-  <p>Elegant ethnic wear for everyday style</p>
+<!-- HERO -->
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>The Art of Chikankari</h1>
+    <p>Handcrafted elegance rooted in tradition</p>
+  </div>
 </div>
 
+<!-- INTRO -->
+<div class="intro">
+  <h2>Dhaaga</h2>
+  <p>
+    A celebration of timeless craftsmanship. Every piece is thoughtfully designed
+    and hand-embroidered to bring elegance into your everyday wardrobe.
+  </p>
+</div>
+
+<!-- PROCESS -->
+<div class="process">
+
+  <div class="step">
+    <img src="STEP1_IMAGE">
+    <h3>Hand Drawn Design</h3>
+    <p>Each piece begins with intricate patterns sketched by skilled artisans.</p>
+  </div>
+
+  <div class="step">
+    <img src="STEP2_IMAGE">
+    <h3>Hand Embroidery</h3>
+    <p>Delicate chikankari stitches crafted with precision and care.</p>
+  </div>
+
+  <div class="step">
+    <img src="STEP3_IMAGE">
+    <h3>Finished Elegance</h3>
+    <p>A timeless outfit that blends tradition with modern style.</p>
+  </div>
+
+</div>
+
+<!-- PRODUCTS -->
 <div class="products">
 
   <div class="product">
-    <img src="https://images.unsplash.com/photo-1602810319428-019690571b5b">
+    <img src="PRODUCT_IMAGE_1">
     <div class="product-info">
-      <h3>Chikankari Kurti</h3>
-      <div class="price">$35</div>
-      <div class="sizes">Sizes: S / M / L</div>
+      <h3>Pink Floral Kurti</h3>
+      <div class="price">$45</div>
       <a href="https://wa.me/1234567890" class="btn">Order Now</a>
     </div>
   </div>
 
   <div class="product">
-    <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c">
+    <img src="PRODUCT_IMAGE_2">
     <div class="product-info">
-      <h3>Kurti Set</h3>
-      <div class="price">$55</div>
-      <div class="sizes">Sizes: S / M / L</div>
-      <a href="https://wa.me/1234567890" class="btn">Order Now</a>
-    </div>
-  </div>
-
-  <div class="product">
-    <img src="https://images.unsplash.com/photo-1622470953794-aa9c70b0fb9d">
-    <div class="product-info">
-      <h3>Casual Kurta</h3>
-      <div class="price">$40</div>
-      <div class="sizes">Sizes: S / M / L</div>
+      <h3>Yellow Chikankari Kurti</h3>
+      <div class="price">$50</div>
       <a href="https://wa.me/1234567890" class="btn">Order Now</a>
     </div>
   </div>
