@@ -1,293 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EverLoop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-export default function EverLoopWebsite() {
-  return (
-    <div className="min-h-screen bg-white text-slate-900">
-      <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-900 text-white text-xl font-semibold">∞</div>
-            <div>
-              <div className="text-xl font-bold tracking-wide">EVERLOOP</div>
-              <div className="text-xs text-slate-500">Weekly washroom cleaning subscription</div>
-            </div>
-          </div>
-          <nav className="hidden gap-8 text-sm md:flex">
-            <a href="#how" className="hover:text-slate-600">How it works</a>
-            <a href="#pricing" className="hover:text-slate-600">Pricing</a>
-            <a href="#why" className="hover:text-slate-600">Why EverLoop</a>
-            <a href="#faq" className="hover:text-slate-600">FAQ</a>
-          </nav>
-          <a
-            href="#waitlist"
-            className="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700"
-          >
-            Join the waitlist
-          </a>
-        </div>
-      </header>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-      <main>
-        <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-white to-white" />
-          <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-2 md:py-24">
-            <div className="flex flex-col justify-center">
-              <div className="mb-4 inline-flex w-fit items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-600 shadow-sm">
-                Local to Mississauga · Limited homes per area
-              </div>
-              <h1 className="max-w-xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
-                Never clean your washroom again.
-              </h1>
-              <p className="mt-6 max-w-xl text-xl leading-8 text-slate-600">
-                Your washroom. On autopilot. EverLoop keeps your washroom clean every week with a simple monthly subscription.
-              </p>
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <a
-                  href="#waitlist"
-                  className="rounded-2xl bg-slate-900 px-6 py-4 text-center text-base font-semibold text-white transition hover:bg-slate-700"
-                >
-                  Join the waitlist
-                </a>
-                <a
-                  href="#pricing"
-                  className="rounded-2xl border border-slate-300 px-6 py-4 text-center text-base font-semibold text-slate-900 transition hover:bg-slate-50"
-                >
-                  See pricing
-                </a>
-              </div>
-              <div className="mt-8 grid max-w-xl grid-cols-1 gap-4 sm:grid-cols-3">
-                <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-                  <div className="text-sm text-slate-500">Weekly</div>
-                  <div className="mt-1 text-lg font-bold">Same day service</div>
-                </div>
-                <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-                  <div className="text-sm text-slate-500">Consistent</div>
-                  <div className="mt-1 text-lg font-bold">Same cleaner</div>
-                </div>
-                <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-                  <div className="text-sm text-slate-500">Simple</div>
-                  <div className="mt-1 text-lg font-bold">Supplies included</div>
-                </div>
-              </div>
-            </div>
+<body class="bg-white text-slate-900">
 
-            <div className="relative">
-              <div className="absolute -left-8 top-12 hidden h-40 w-40 rounded-full bg-sky-100 blur-3xl md:block" />
-              <div className="absolute bottom-8 right-0 hidden h-40 w-40 rounded-full bg-slate-100 blur-3xl md:block" />
-              <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-4 shadow-2xl">
-                <div className="aspect-[4/5] rounded-[1.5rem] bg-[linear-gradient(135deg,#f8fafc_0%,#ffffff_40%,#eef6ff_100%)] p-6">
-                  <div className="flex h-full flex-col justify-between rounded-[1.5rem] border border-slate-200 bg-white/80 p-6 backdrop-blur">
-                    <div>
-                      <div className="mb-4 inline-flex items-center rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white">
-                        Weekly cleaning you can count on
-                      </div>
-                      <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
-                        <div className="text-base font-semibold text-slate-500">Simple subscription pricing</div>
-                        <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                          <div className="rounded-2xl bg-slate-50 p-5">
-                            <div className="text-4xl font-black">$120</div>
-                            <div className="text-slate-500">/ month</div>
-                            <p className="mt-4 text-sm text-slate-600">Weekly cleaning for your first washroom</p>
-                          </div>
-                          <div className="rounded-2xl bg-slate-50 p-5">
-                            <div className="text-4xl font-black">+$30</div>
-                            <div className="text-slate-500">/ month</div>
-                            <p className="mt-4 text-sm text-slate-600">Each additional washroom</p>
-                          </div>
-                        </div>
-                        <div className="mt-4 grid gap-3 text-sm font-semibold text-slate-700 sm:grid-cols-2">
-                          <div className="rounded-xl border border-slate-200 p-4">2 washrooms = $150/month</div>
-                          <div className="rounded-xl border border-slate-200 p-4">3 washrooms = $180/month</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="rounded-2xl bg-slate-900 p-5 text-white">
-                      <div className="text-sm uppercase tracking-[0.18em] text-slate-300">Limited homes per area</div>
-                      <div className="mt-2 text-2xl font-bold">Join the waitlist for your area</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="how" className="mx-auto max-w-7xl px-6 py-20">
-          <div className="max-w-2xl">
-            <div className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-700">How it works</div>
-            <h2 className="mt-3 text-4xl font-black tracking-tight">Simple, recurring, and easy to manage.</h2>
-          </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {[
-              ["Choose your plan", "Start with one washroom for $120 per month and add more for $30 each."],
-              ["Pick your weekly slot", "We route homes by area so you get reliable, consistent weekly service."],
-              ["Stay clean automatically", "Same cleaner, same day, supplies included, less to think about."],
-            ].map(([title, desc]) => (
-              <div key={title} className="rounded-[1.75rem] border border-slate-200 bg-white p-7 shadow-sm">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 text-lg font-bold text-white">
-                  {title === "Choose your plan" ? "1" : title === "Pick your weekly slot" ? "2" : "3"}
-                </div>
-                <h3 className="text-2xl font-bold">{title}</h3>
-                <p className="mt-3 text-base leading-7 text-slate-600">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section id="pricing" className="bg-slate-50 py-20">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="max-w-2xl">
-              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-700">Pricing</div>
-              <h2 className="mt-3 text-4xl font-black tracking-tight">Straightforward monthly pricing.</h2>
-              <p className="mt-4 text-lg text-slate-600">No complicated packages. Just weekly washroom cleaning on a recurring monthly plan.</p>
-            </div>
-            <div className="mt-10 grid gap-6 lg:grid-cols-3">
-              <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm lg:col-span-2">
-                <div className="grid gap-6 md:grid-cols-2">
-                  <div className="rounded-[1.5rem] bg-slate-900 p-8 text-white">
-                    <div className="text-sm uppercase tracking-[0.18em] text-slate-300">First washroom</div>
-                    <div className="mt-4 text-6xl font-black">$120</div>
-                    <div className="text-lg text-slate-300">per month</div>
-                    <p className="mt-4 text-base leading-7 text-slate-200">Weekly cleaning for your first washroom.</p>
-                  </div>
-                  <div className="rounded-[1.5rem] bg-white p-8 ring-1 ring-slate-200">
-                    <div className="text-sm uppercase tracking-[0.18em] text-slate-500">Additional washrooms</div>
-                    <div className="mt-4 text-6xl font-black">+$30</div>
-                    <div className="text-lg text-slate-500">per month</div>
-                    <p className="mt-4 text-base leading-7 text-slate-600">Each additional washroom added to the same home.</p>
-                  </div>
-                </div>
-                <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-2xl border border-slate-200 p-5 text-lg font-semibold">2 washrooms = <span className="text-sky-700">$150/month</span></div>
-                  <div className="rounded-2xl border border-slate-200 p-5 text-lg font-semibold">3 washrooms = <span className="text-sky-700">$180/month</span></div>
-                </div>
-              </div>
-              <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
-                <div className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-700">Included</div>
-                <ul className="mt-5 space-y-4 text-base text-slate-700">
-                  <li>✓ Weekly service</li>
-                  <li>✓ Same day scheduling</li>
-                  <li>✓ Same cleaner every visit</li>
-                  <li>✓ Supplies included</li>
-                  <li>✓ Local to Mississauga</li>
-                </ul>
-                <div className="mt-8 rounded-2xl bg-sky-50 p-5 text-sm leading-7 text-slate-700">
-                  We only service a limited number of homes per area to keep routes efficient and service consistent.
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="why" className="mx-auto max-w-7xl px-6 py-20">
-          <div className="grid gap-10 lg:grid-cols-2">
-            <div>
-              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-700">Why EverLoop</div>
-              <h2 className="mt-3 text-4xl font-black tracking-tight">A better way to keep your home consistently clean.</h2>
-              <p className="mt-4 max-w-xl text-lg leading-8 text-slate-600">
-                EverLoop is built around reliability, route density, and recurring care. That means better consistency for your home and a simpler service experience for you.
-              </p>
-            </div>
-            <div className="grid gap-5 sm:grid-cols-2">
-              {[
-                ["Reliable & consistent", "Weekly service you can count on."],
-                ["Same cleaner", "Familiar service, less friction."],
-                ["Supplies included", "No prep, no extra shopping."],
-                ["Local to Mississauga", "Focused routes for better service quality."],
-              ].map(([title, desc]) => (
-                <div key={title} className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
-                  <h3 className="text-xl font-bold">{title}</h3>
-                  <p className="mt-2 text-base leading-7 text-slate-600">{desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-slate-50 py-20">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="max-w-2xl">
-              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-700">Testimonials</div>
-              <h2 className="mt-3 text-4xl font-black tracking-tight">Built to become the easiest service in your week.</h2>
-              <p className="mt-4 text-lg text-slate-600">Add real customer feedback here as you onboard your first homes. For now, use placeholder social-proof styling only if needed during preview.</p>
-            </div>
-            <div className="mt-10 grid gap-6 md:grid-cols-3">
-              {[
-                ["\“Consistent, simple, and one less thing to think about every week.\”", "Future EverLoop customer"],
-                ["\“The scheduling was easy and the service felt polished from the start.\”", "Future EverLoop customer"],
-                ["\“Exactly the kind of recurring home service I wish existed sooner.\”", "Future EverLoop customer"],
-              ].map(([quote, name]) => (
-                <div key={quote} className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm">
-                  <p className="text-lg leading-8 text-slate-700">{quote}</p>
-                  <div className="mt-6 text-sm font-semibold uppercase tracking-[0.15em] text-slate-500">{name}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="faq" className="bg-slate-50 py-20">
-          <div className="mx-auto max-w-5xl px-6">
-            <div className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-700">FAQ</div>
-            <h2 className="mt-3 text-4xl font-black tracking-tight">Questions people will ask before they book.</h2>
-            <div className="mt-10 space-y-4">
-              {[
-                ["How often do you come?", "EverLoop is a weekly washroom cleaning subscription. We come once every week."],
-                ["What areas do you service?", "We’re currently focused on Mississauga and expand area by area."],
-                ["Do you bring supplies?", "Yes. Supplies are included in the monthly price."],
-                ["Can I add another washroom later?", "Yes. Each additional washroom is $30 per month."],
-              ].map(([q, a]) => (
-                <div key={q} className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
-                  <div className="text-lg font-bold">{q}</div>
-                  <p className="mt-2 text-base leading-7 text-slate-600">{a}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="waitlist" className="mx-auto max-w-7xl px-6 py-20">
-          <div className="overflow-hidden rounded-[2.5rem] bg-slate-900 p-10 text-white shadow-2xl md:p-14">
-            <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-              <div>
-                <div className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-300">Join the EverLoop waitlist</div>
-                <h2 className="mt-3 text-4xl font-black tracking-tight md:text-5xl">Reserve your area before spots fill up.</h2>
-                <p className="mt-4 max-w-xl text-lg leading-8 text-slate-300">
-                  We only take a limited number of homes per area to keep service consistent. Join the waitlist and we’ll contact you when we open your neighborhood.
-                </p>
-                <div className="mt-6 text-sm text-slate-300">Website: everloopservices.com</div>
-                <div className="mt-2 text-sm text-slate-300">Instagram: @everloopservices</div>
-              </div>
-              <form className="grid gap-4 rounded-[2rem] bg-white p-6 text-slate-900 shadow-xl">
-                <input className="rounded-xl border border-slate-300 px-4 py-3 outline-none ring-0 transition focus:border-slate-900" placeholder="Full name" />
-                <input className="rounded-xl border border-slate-300 px-4 py-3 outline-none ring-0 transition focus:border-slate-900" placeholder="Email" />
-                <input className="rounded-xl border border-slate-300 px-4 py-3 outline-none ring-0 transition focus:border-slate-900" placeholder="Phone" />
-                <input className="rounded-xl border border-slate-300 px-4 py-3 outline-none ring-0 transition focus:border-slate-900" placeholder="Postal code" />
-                <select className="rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-slate-900">
-                  <option>Number of washrooms</option>
-                  <option>1 washroom</option>
-                  <option>2 washrooms</option>
-                  <option>3 washrooms</option>
-                  <option>4+ washrooms</option>
-                </select>
-                <textarea className="min-h-[110px] rounded-xl border border-slate-300 px-4 py-3 outline-none ring-0 transition focus:border-slate-900" placeholder="Anything we should know?" />
-                <button className="mt-2 rounded-2xl bg-slate-900 px-6 py-4 text-base font-semibold text-white transition hover:bg-slate-700">
-                  Join the waitlist
-                </button>
-              </form>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer className="border-t border-slate-200 bg-white">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
-          <div>© 2026 EverLoop. Your washroom. On autopilot.</div>
-          <div className="flex gap-6">
-            <a href="https://www.instagram.com/everloopservices" className="hover:text-slate-700">Instagram: @everloopservices</a>
-            <a href="https://everloopservices.com" className="hover:text-slate-700">everloopservices.com</a>
-          </div>
-        </div>
-      </footer>
+<!-- HEADER -->
+<header class="sticky top-0 z-30 border-b bg-white">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+    <div class="flex items-center gap-3">
+      <div class="h-10 w-10 flex items-center justify-center bg-black text-white rounded-xl">∞</div>
+      <div>
+        <div class="font-bold text-xl">EVERLOOP</div>
+        <div class="text-xs text-gray-500">Weekly washroom cleaning</div>
+      </div>
     </div>
-  );
-}
+
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href="#how">How</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <a href="#waitlist" class="bg-black text-white px-4 py-2 rounded-xl">Join</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10">
+  
+  <div>
+    <h1 class="text-5xl font-bold">
+      Never clean your washroom again.
+    </h1>
+
+    <p class="mt-4 text-gray-600 text-lg">
+      Weekly cleaning subscription for your home.
+    </p>
+
+    <div class="mt-6 flex gap-4">
+      <a href="#waitlist" class="bg-black text-white px-6 py-3 rounded-xl">Join</a>
+      <a href="#pricing" class="border px-6 py-3 rounded-xl">Pricing</a>
+    </div>
+  </div>
+
+  <div class="bg-gray-100 rounded-3xl p-10">
+    <h2 class="text-2xl font-bold">$120/month</h2>
+    <p class="mt-2 text-gray-600">Weekly cleaning</p>
+
+    <div class="mt-4">
+      <p>+ $30 per extra washroom</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- HOW -->
+<section id="how" class="max-w-7xl mx-auto px-6 py-20">
+  <h2 class="text-3xl font-bold mb-6">How it works</h2>
+
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="p-6 border rounded-2xl">
+      <h3 class="font-bold text-xl">1. Choose plan</h3>
+      <p class="text-gray-600 mt-2">Start with 1 washroom</p>
+    </div>
+
+    <div class="p-6 border rounded-2xl">
+      <h3 class="font-bold text-xl">2. Pick time</h3>
+      <p class="text-gray-600 mt-2">Same day every week</p>
+    </div>
+
+    <div class="p-6 border rounded-2xl">
+      <h3 class="font-bold text-xl">3. Done</h3>
+      <p class="text-gray-600 mt-2">We handle everything</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="bg-gray-50 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-6">Pricing</h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-black text-white p-8 rounded-2xl">
+        <h3 class="text-xl">First washroom</h3>
+        <div class="text-4xl font-bold mt-2">$120</div>
+      </div>
+
+      <div class="bg-white p-8 border rounded-2xl">
+        <h3 class="text-xl">Extra washroom</h3>
+        <div class="text-4xl font-bold mt-2">+$30</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAITLIST -->
+<section id="waitlist" class="max-w-7xl mx-auto px-6 py-20">
+  <h2 class="text-3xl font-bold mb-6">Join Waitlist</h2>
+
+  <form class="grid gap-4 max-w-md">
+    <input class="border p-3 rounded-xl" placeholder="Name">
+    <input class="border p-3 rounded-xl" placeholder="Email">
+    <input class="border p-3 rounded-xl" placeholder="Phone">
+
+    <button class="bg-black text-white p-3 rounded-xl">
+      Submit
+    </button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t py-6 text-center text-gray-500">
+  © 2026 EverLoop
+</footer>
+
+</body>
+</html>
