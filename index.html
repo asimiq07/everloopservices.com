@@ -15,7 +15,7 @@
     header {
       background: #1f3a5f;
       color: white;
-      padding: 18px 40px;
+      padding: 18px 50px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -32,12 +32,14 @@
       text-decoration: none;
     }
 
+    /* 🔥 HERO SECTION UPGRADED */
     .hero {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 110px 40px;
+      padding: 140px 60px;
       background: linear-gradient(to right, #ffffff, #eef3f9);
+      gap: 60px;
       flex-wrap: wrap;
     }
 
@@ -56,9 +58,12 @@
       color: #555;
     }
 
+    /* 🔥 BIGGER PREMIUM IMAGE */
     .hero img {
-      width: 420px;
-      border-radius: 12px;
+      width: 560px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+      transform: scale(1.03);
     }
 
     .btn {
@@ -82,9 +87,11 @@
       margin-bottom: 20px;
     }
 
+    /* 🔥 FIXED CONTENT ALIGNMENT */
     .container {
-      max-width: 850px;
+      max-width: 800px;
       margin: auto;
+      text-align: left;
     }
 
     .steps {
@@ -137,10 +144,6 @@
       text-align: center;
     }
 
-    .cta h2 {
-      margin-bottom: 15px;
-    }
-
     .form-container {
       max-width: 500px;
       margin: auto;
@@ -159,123 +162,3 @@
       color: white;
       padding: 14px;
       border: none;
-      width: 100%;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-
-    footer {
-      background: #1f3a5f;
-      color: white;
-      padding: 25px;
-      text-align: center;
-    }
-
-  </style>
-</head>
-
-<body>
-
-<header>
-  <div class="logo">∞ EverLoop</div>
-  <nav>
-    <a href="#how">How It Works</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<div class="hero">
-  <div class="hero-text">
-    <h1>Never clean your washroom again.</h1>
-    <p>EverLoop keeps your washroom clean every week — automatically.</p>
-    <a href="#contact" class="btn">Get Started</a>
-  </div>
-
-  <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a">
-</div>
-
-<section>
-  <div class="container">
-    <h2>What is EverLoop?</h2>
-    <p>
-      A subscription-based cleaning service designed for busy households.  
-      No more booking again and again — we handle your washroom cleaning every week.
-    </p>
-  </div>
-</section>
-
-<section id="how">
-  <h2>How It Works</h2>
-
-  <div class="steps">
-    <div class="step">
-      <h3>1. Sign Up</h3>
-      <p>Submit your details and choose your plan.</p>
-    </div>
-
-    <div class="step">
-      <h3>2. We Schedule</h3>
-      <p>We assign your weekly cleaning slot.</p>
-    </div>
-
-    <div class="step">
-      <h3>3. We Maintain</h3>
-      <p>Your washroom stays clean every week.</p>
-    </div>
-  </div>
-</section>
-
-<section id="pricing">
-  <h2>Simple Subscription Pricing</h2>
-
-  <div class="pricing">
-    <div class="card highlight">
-      <h3>$120/month</h3>
-      <p>Weekly cleaning for your first washroom</p>
-    </div>
-
-    <div class="card">
-      <h3>+$30/month</h3>
-      <p>Each additional washroom</p>
-    </div>
-  </div>
-</section>
-
-<section class="dark-section">
-  <h2>Why Choose EverLoop?</h2>
-  <p>✔ No more last-minute cleaning stress</p>
-  <p>✔ Same cleaner every visit</p>
-  <p>✔ Consistent premium quality</p>
-  <p>✔ Limited homes per area</p>
-</section>
-
-<section class="cta">
-  <h2>Limited spots available in Mississauga</h2>
-  <p>Secure your weekly cleaning slot today.</p>
-  <a href="#contact" class="btn">Request Service</a>
-</section>
-
-<section id="contact">
-  <h2>Get Started</h2>
-
-  <div class="form-container">
-    <form action="https://formspree.io/f/mdaykqog" method="POST">
-      <input type="text" name="name" placeholder="Full Name" required>
-      <input type="text" name="address" placeholder="Address" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" placeholder="Details"></textarea>
-
-      <button type="submit">Request Service</button>
-    </form>
-  </div>
-
-</section>
-
-<footer>
-  <p>EverLoop © 2026</p>
-</footer>
-
-</body>
-</html>
