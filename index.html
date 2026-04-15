@@ -30,9 +30,6 @@
       font-size: 26px;
       font-weight: bold;
       letter-spacing: 1px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
     }
 
     nav {
@@ -62,49 +59,51 @@
       background: #e5e5e5;
     }
 
-    /* HERO (POSTER STYLE) */
+    /* HERO (UPDATED ONLY THIS PART) */
     .hero {
       height: 90vh;
-      background: 
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-        url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a');
-      background-size: cover;
-      background-position: center;
       display: flex;
       align-items: center;
       padding: 0 40px;
+
+      background: 
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a');
+
+      background-size: cover;
+      background-position: center;
+
       color: white;
     }
 
-    .hero-content {
+    .hero-text {
       max-width: 600px;
     }
 
     .hero h1 {
-      font-size: 60px;
-      margin-bottom: 20px;
-      line-height: 1.1;
+      font-size: 56px;
+      margin-bottom: 15px;
     }
 
     .hero p {
-      font-size: 20px;
+      font-size: 18px;
       margin-bottom: 25px;
       color: #eaeaea;
     }
 
     .btn {
       padding: 14px 30px;
-      background: white;
-      color: black;
+      background: #000;
+      color: white;
       border-radius: 30px;
       text-decoration: none;
-      font-weight: 600;
+      display: inline-block;
       transition: 0.3s;
     }
 
     .btn:hover {
+      background: #222;
       transform: translateY(-2px);
-      background: #ddd;
     }
 
     section {
@@ -112,9 +111,31 @@
       text-align: center;
     }
 
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
     .container {
       max-width: 800px;
       margin: auto;
+    }
+
+    /* STEPS */
+    .steps {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .step {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      width: 260px;
+      border: 1px solid black;
     }
 
     /* PRICING */
@@ -174,9 +195,7 @@
 <body>
 
 <header>
-  <div class="logo">
-    ∞ EVERLOOP
-  </div>
+  <div class="logo">∞ EVERLOOP</div>
 
   <nav>
     <a href="#how">How It Works</a>
@@ -186,45 +205,77 @@
   </nav>
 </header>
 
-<!-- HERO POSTER -->
+<!-- HERO -->
 <div class="hero">
-  <div class="hero-content">
+  <div class="hero-text">
     <h1>Never clean your washroom again.</h1>
-    <p>Your washroom. On autopilot.</p>
-    <a href="#contact" class="btn">Join the waitlist</a>
+    <p>EverLoop keeps your washroom clean every week.</p>
+    <a href="#contact" class="btn">Get Started</a>
   </div>
 </div>
 
 <section>
   <div class="container">
-    <h2>Simple Pricing</h2>
-    <p>Weekly cleaning subscription</p>
+    <h2>What is EverLoop?</h2>
+    <p>
+      A subscription-based cleaning service designed for busy households.  
+      No more booking again and again — we handle your washroom cleaning every week.
+    </p>
+  </div>
+</section>
 
-    <div class="pricing">
-      <div class="card highlight">
-        <h3>$120/month</h3>
-        <p>First washroom</p>
-      </div>
+<section id="how">
+  <h2>How It Works</h2>
 
-      <div class="card">
-        <h3>+$30</h3>
-        <p>Each additional</p>
-      </div>
+  <div class="steps">
+    <div class="step">
+      <h3>1. Sign Up</h3>
+      <p>Submit your details and choose your plan.</p>
+    </div>
+
+    <div class="step">
+      <h3>2. We Schedule</h3>
+      <p>We assign your weekly cleaning slot.</p>
+    </div>
+
+    <div class="step">
+      <h3>3. We Maintain</h3>
+      <p>Your washroom stays clean every week.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2>Simple Subscription Pricing</h2>
+
+  <div class="pricing">
+    <div class="card highlight">
+      <h3>$120/month</h3>
+      <p>Weekly cleaning for your first washroom</p>
+    </div>
+
+    <div class="card">
+      <h3>+$30/month</h3>
+      <p>Each additional washroom</p>
     </div>
   </div>
 </section>
 
 <section id="contact">
-  <h2>Join Waitlist</h2>
+  <h2>Get Started</h2>
 
   <div class="form-container">
     <form action="https://formspree.io/f/mdaykqog" method="POST">
-      <input type="text" name="name" placeholder="Name" required>
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="text" name="address" placeholder="Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
       <input type="email" name="email" placeholder="Email" required>
-      <input type="tel" name="phone" placeholder="Phone" required>
-      <button type="submit">Submit</button>
+      <textarea name="message" placeholder="Details"></textarea>
+
+      <button type="submit">Request Service</button>
     </form>
   </div>
+
 </section>
 
 <footer>
