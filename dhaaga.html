@@ -12,26 +12,39 @@ body {
   background: #f8f8f8;
 }
 
-/* HEADER */
-.header {
-  position: relative;
-  height: 70vh;
-  background: url('images/Headder.webp') center/cover no-repeat;
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.logo {
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  font-size: 28px;
+.nav-logo {
   font-weight: bold;
-  color: white;
-  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+/* HEADER */
+.header {
+  height: 60vh;
+  background: url('images/Headder.webp') center/cover no-repeat;
 }
 
 /* SECTION */
 .section {
-  padding: 50px 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
@@ -47,7 +60,12 @@ body {
   background: white;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .card img {
@@ -76,51 +94,28 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background: #16324d;
-}
-
-/* THUMBNAILS */
-.thumbs {
-  display: flex;
-  gap: 5px;
-  padding: 5px;
-  justify-content: center;
-}
-
-.thumbs img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-/* ABOUT SECTION */
+/* ABOUT BOX */
 .about-section {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  justify-content: center;
   padding: 50px 20px;
-  background: #fff;
 }
 
-.about-img {
-  flex: 1;
-}
-
-.about-img img {
-  width: 100%;
+.about-box {
+  display: flex;
+  max-width: 900px;
+  background: white;
   border-radius: 10px;
+  overflow: hidden;
+}
+
+.about-box img {
+  width: 300px;
+  object-fit: cover;
 }
 
 .about-text {
-  flex: 1;
   padding: 20px;
-}
-
-.about-text h2 {
-  margin-bottom: 10px;
 }
 
 /* FOOTER */
@@ -134,10 +129,18 @@ button:hover {
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
-  <div class="logo">Dhaaga</div>
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-logo">Dhaaga Collections</div>
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact Us</a>
+  </div>
 </div>
+
+<!-- HEADER -->
+<div class="header"></div>
 
 <!-- COLLECTION -->
 <div class="section">
@@ -148,45 +151,30 @@ button:hover {
 <div class="products">
 
   <!-- PINK -->
-  <div class="card">
+  <div class="card" 
+    onmouseover="startHover('pinkImg',['images/Pink1.webp','images/Pink2.webp'])" 
+    onmouseout="stopHover()">
     <img id="pinkImg" src="images/Pink1.webp">
-
-    <div class="thumbs">
-      <img src="images/Pink1.webp" onclick="changeImage('pinkImg', this.src)">
-      <img src="images/Pink2.webp" onclick="changeImage('pinkImg', this.src)">
-    </div>
-
     <h3>Pink Floral Kurti</h3>
     <div class="price">$45</div>
     <button>Order Now</button>
   </div>
 
   <!-- ORANGE -->
-  <div class="card">
+  <div class="card" 
+    onmouseover="startHover('orangeImg',['images/Orange1.webp','images/Orange2.webp','images/Orange3.webp'])" 
+    onmouseout="stopHover()">
     <img id="orangeImg" src="images/Orange1.webp">
-
-    <div class="thumbs">
-      <img src="images/Orange1.webp" onclick="changeImage('orangeImg', this.src)">
-      <img src="images/Orange2.webp" onclick="changeImage('orangeImg', this.src)">
-      <img src="images/Orange3.webp" onclick="changeImage('orangeImg', this.src)">
-    </div>
-
     <h3>Orange Chikankari Kurti</h3>
     <div class="price">$50</div>
     <button>Order Now</button>
   </div>
 
   <!-- GREEN -->
-  <div class="card">
+  <div class="card" 
+    onmouseover="startHover('greenImg',['images/Green1.webp','images/Green2.webp','images/Green3.webp'])" 
+    onmouseout="stopHover()">
     <img id="greenImg" src="images/Green1.webp">
-
-    <div class="thumbs">
-      <img src="images/Green1.webp" onclick="changeImage('greenImg', this.src)">
-      <img src="images/Green2.webp" onclick="changeImage('greenImg', this.src)">
-      <img src="images/Green3.webp" onclick="changeImage('greenImg', this.src)">
-      <img src="images/Green4.webp" onclick="changeImage('greenImg', this.src)">
-    </div>
-
     <h3>Green Elegant Kurti</h3>
     <div class="price">$48</div>
     <button>Order Now</button>
@@ -194,22 +182,18 @@ button:hover {
 
 </div>
 
-<!-- ABOUT CHIKANKARI -->
+<!-- ABOUT -->
 <div class="about-section">
-
-  <div class="about-img">
+  <div class="about-box">
     <img src="images/Down.webp">
+    <div class="about-text">
+      <h2>The Art of Chikankari</h2>
+      <p>
+        Chikankari is a centuries-old embroidery art form known for its delicate
+        handwork and timeless elegance. Each Dhaaga piece blends tradition with modern style.
+      </p>
+    </div>
   </div>
-
-  <div class="about-text">
-    <h2>The Art of Chikankari</h2>
-    <p>
-      Chikankari is a centuries-old embroidery art form known for its delicate
-      handwork and timeless elegance. Each Dhaaga piece is carefully handcrafted,
-      blending tradition with modern style.
-    </p>
-  </div>
-
 </div>
 
 <!-- FOOTER -->
@@ -219,8 +203,18 @@ button:hover {
 
 <!-- SCRIPT -->
 <script>
-function changeImage(id, src) {
-  document.getElementById(id).src = src;
+let hoverInterval;
+
+function startHover(id, images) {
+  let i = 0;
+  hoverInterval = setInterval(() => {
+    document.getElementById(id).src = images[i];
+    i = (i + 1) % images.length;
+  }, 700);
+}
+
+function stopHover() {
+  clearInterval(hoverInterval);
 }
 </script>
 
