@@ -28,8 +28,8 @@
 
     .logo {
       font-size: 26px;
-      font-weight: bold;
-      letter-spacing: 1px;
+      font-weight: 700;
+      letter-spacing: 2px;
     }
 
     nav {
@@ -42,6 +42,10 @@
       margin-left: 25px;
       text-decoration: none;
       font-size: 15px;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
     }
 
     .join-btn {
@@ -59,7 +63,7 @@
       background: #e5e5e5;
     }
 
-    /* HERO (UPDATED ONLY THIS PART) */
+    /* HERO */
     .hero {
       height: 90vh;
       display: flex;
@@ -67,7 +71,7 @@
       padding: 0 40px;
 
       background: 
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
         url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a');
 
       background-size: cover;
@@ -78,6 +82,7 @@
 
     .hero-text {
       max-width: 600px;
+      padding-top: 40px;
     }
 
     .hero h1 {
@@ -121,6 +126,15 @@
       margin: auto;
     }
 
+    .container p {
+      font-size: 22px;
+      line-height: 1.8;
+      color: #444;
+      max-width: 720px;
+      margin: auto;
+      font-weight: 400;
+    }
+
     /* STEPS */
     .steps {
       display: flex;
@@ -152,6 +166,11 @@
       border-radius: 16px;
       border: 1px solid black;
       width: 260px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
     }
 
     .highlight {
@@ -218,8 +237,12 @@
   <div class="container">
     <h2>What is EverLoop?</h2>
     <p>
-      A subscription-based cleaning service designed for busy households.  
-      No more booking again and again — we handle your washroom cleaning every week.
+      EverLoop is a subscription-based washroom cleaning service built for busy households.  
+      Instead of booking again and again, your cleaning is scheduled every week — 
+      so your washroom stays consistently fresh without the hassle.
+      <br><br>
+      With the same trusted cleaner, consistent quality, and a simple monthly plan, 
+      EverLoop turns cleaning into something you never have to think about.
     </p>
   </div>
 </section>
