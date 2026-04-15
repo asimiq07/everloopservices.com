@@ -173,6 +173,25 @@
       text-align: center;
     }
 
+    /* 🔥 WHATSAPP BUTTON */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 50px;
+      font-size: 14px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    .whatsapp-btn:hover {
+      background: #1ebe5d;
+    }
+
   </style>
 </head>
 
@@ -213,38 +232,22 @@
 <section id="how">
   <h2>How It Works</h2>
   <div class="steps">
-    <div class="step">
-      <h3>1. Sign Up</h3>
-      <p>Submit your details and choose your plan.</p>
-    </div>
-    <div class="step">
-      <h3>2. We Schedule</h3>
-      <p>We assign your weekly cleaning slot.</p>
-    </div>
-    <div class="step">
-      <h3>3. We Maintain</h3>
-      <p>Your washroom stays clean every week.</p>
-    </div>
+    <div class="step"><h3>1. Sign Up</h3><p>Submit your details and choose your plan.</p></div>
+    <div class="step"><h3>2. We Schedule</h3><p>We assign your weekly cleaning slot.</p></div>
+    <div class="step"><h3>3. We Maintain</h3><p>Your washroom stays clean every week.</p></div>
   </div>
 </section>
 
 <section id="pricing">
   <h2>Simple Subscription Pricing</h2>
   <div class="pricing">
-    <div class="card highlight">
-      <h3>$120/month</h3>
-      <p>Weekly cleaning for your first washroom</p>
-    </div>
-    <div class="card">
-      <h3>+$30/month</h3>
-      <p>Each additional washroom</p>
-    </div>
+    <div class="card highlight"><h3>$120/month</h3><p>Weekly cleaning for your first washroom</p></div>
+    <div class="card"><h3>+$30/month</h3><p>Each additional washroom</p></div>
   </div>
 </section>
 
 <section id="contact">
   <h2>Get Started</h2>
-
   <div class="form-container">
     <form action="https://formspree.io/f/mdaykqog" method="POST">
       <input type="text" name="name" placeholder="Full Name" required>
@@ -252,7 +255,6 @@
       <input type="tel" name="phone" placeholder="Phone Number" required>
       <input type="email" name="email" placeholder="Email" required>
       <textarea name="message" placeholder="Details"></textarea>
-
       <button type="submit">Request Service</button>
     </form>
   </div>
@@ -265,10 +267,7 @@
       For further inquiries, please contact our team.
       <br><br>
       📞 437-717-8874 <br>
-      📸 
-      <a href="https://instagram.com/everloopservices" target="_blank" style="color:black;">
-        @everloopservices
-      </a> <br>
+      📸 <a href="https://instagram.com/everloopservices" target="_blank" style="color:black;">@everloopservices</a> <br>
       ✉️ everloopservices@gmail.com
     </p>
   </div>
@@ -277,6 +276,11 @@
 <footer>
   EverLoop © 2026
 </footer>
+
+<!-- 🔥 WHATSAPP BUTTON -->
+<a class="whatsapp-btn" href="https://wa.me/14377178874?text=Hi%2C%20I%E2%80%99m%20interested%20in%20your%20cleaning%20service" target="_blank">
+  Chat on WhatsApp
+</a>
 
 </body>
 </html>
