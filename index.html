@@ -52,37 +52,28 @@
       border-radius: 25px;
       font-weight: 600;
       text-decoration: none;
+      transition: 0.3s;
     }
 
-    /* HERO */
+    .join-btn:hover {
+      background: #e5e5e5;
+    }
+
+    /* HERO (UPDATED ONLY THIS PART) */
     .hero {
       height: 90vh;
       display: flex;
       align-items: center;
       padding: 0 40px;
-      position: relative;
-      overflow: hidden;
-      color: white;
-    }
 
-    /* IMAGE LAYER */
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
+      background: 
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a');
+
       background-size: cover;
       background-position: center;
-      transition: opacity 1s ease-in-out;
-      z-index: -2;
-    }
 
-    /* DARK OVERLAY */
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.45);
-      z-index: -1;
+      color: white;
     }
 
     .hero-text {
@@ -107,6 +98,12 @@
       border-radius: 30px;
       text-decoration: none;
       display: inline-block;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #222;
+      transform: translateY(-2px);
     }
 
     section {
@@ -124,14 +121,7 @@
       margin: auto;
     }
 
-    .container p {
-      font-size: 22px;
-      line-height: 1.8;
-      color: #444;
-      max-width: 720px;
-      margin: auto;
-    }
-
+    /* STEPS */
     .steps {
       display: flex;
       justify-content: center;
@@ -148,6 +138,7 @@
       border: 1px solid black;
     }
 
+    /* PRICING */
     .pricing {
       display: flex;
       justify-content: center;
@@ -168,6 +159,7 @@
       color: white;
     }
 
+    /* FORM */
     .form-container {
       max-width: 500px;
       margin: auto;
@@ -214,7 +206,7 @@
 </header>
 
 <!-- HERO -->
-<div class="hero" id="hero">
+<div class="hero">
   <div class="hero-text">
     <h1>Never clean your washroom again.</h1>
     <p>EverLoop keeps your washroom clean every week.</p>
@@ -289,27 +281,6 @@
 <footer>
   EverLoop © 2026
 </footer>
-
-<!-- 🔥 IMAGE SLIDER SCRIPT -->
-<script>
-const images = [
-  "https://images.unsplash.com/photo-1584622650111-993a426fbf0a",
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-  "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea"
-];
-
-let index = 0;
-const hero = document.getElementById("hero");
-
-function changeImage() {
-  hero.style.setProperty("--bg", `url(${images[index]})`);
-  hero.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(${images[index]})`;
-  index = (index + 1) % images.length;
-}
-
-changeImage();
-setInterval(changeImage, 5000);
-</script>
 
 </body>
 </html>
