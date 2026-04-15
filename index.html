@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #f5f7fa;
+      background: #f4f6f9;
       color: #1f3a5f;
     }
 
@@ -36,8 +36,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 80px 40px;
-      background: white;
+      padding: 100px 40px;
+      background: linear-gradient(to right, #ffffff, #eef3f9);
       flex-wrap: wrap;
     }
 
@@ -46,8 +46,8 @@
     }
 
     .hero h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
+      font-size: 52px;
+      margin-bottom: 15px;
     }
 
     .hero p {
@@ -56,18 +56,20 @@
     }
 
     .hero img {
-      width: 400px;
-      border-radius: 10px;
+      width: 420px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
 
     .btn {
-      margin-top: 20px;
+      margin-top: 25px;
       padding: 14px 30px;
       background: #1f3a5f;
       color: white;
       border-radius: 8px;
       text-decoration: none;
       display: inline-block;
+      font-weight: 500;
     }
 
     section {
@@ -76,6 +78,7 @@
     }
 
     h2 {
+      font-size: 30px;
       margin-bottom: 40px;
     }
 
@@ -88,20 +91,35 @@
 
     .card {
       background: white;
-      padding: 30px;
-      border-radius: 12px;
+      padding: 35px;
+      border-radius: 16px;
       width: 260px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
       transition: 0.3s;
     }
 
     .card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-10px);
     }
 
     .highlight {
-      border: 2px solid #1f3a5f;
-      transform: scale(1.05);
+      background: #1f3a5f;
+      color: white;
+      transform: scale(1.08);
+    }
+
+    .highlight p {
+      color: #ddd;
+    }
+
+    .dark-section {
+      background: #1f3a5f;
+      color: white;
+      padding: 80px 20px;
+    }
+
+    .dark-section p {
+      color: #ddd;
     }
 
     .form-container {
@@ -114,7 +132,7 @@
       padding: 14px;
       margin: 10px 0;
       border-radius: 8px;
-      border: 1px solid #ccc;
+      border: none;
     }
 
     button {
@@ -124,6 +142,7 @@
       border: none;
       width: 100%;
       border-radius: 8px;
+      font-size: 16px;
     }
 
     footer {
@@ -153,7 +172,7 @@
     <a href="#contact" class="btn">Get Started</a>
   </div>
 
-  <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a" alt="clean bathroom">
+  <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a">
 </div>
 
 <section id="pricing">
@@ -180,6 +199,14 @@
       <p>$180/month</p>
     </div>
   </div>
+</section>
+
+<section class="dark-section">
+  <h2>Why EverLoop?</h2>
+  <p>✔ Limited homes per area</p>
+  <p>✔ Reliable & consistent service</p>
+  <p>✔ Local Mississauga team</p>
+  <p>✔ Satisfaction guaranteed</p>
 </section>
 
 <section id="contact">
